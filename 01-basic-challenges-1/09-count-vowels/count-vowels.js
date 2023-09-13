@@ -9,6 +9,7 @@ function countVowels(string) {
   // }, 0);
 
   // OR
+  // Filter all vowels out of the string made into array - and count items
   const vowelArray = lowerString.split("").filter((letter) => vowels.includes(letter));
   return vowelArray.length;
 }

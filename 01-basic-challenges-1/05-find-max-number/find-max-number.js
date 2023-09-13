@@ -3,8 +3,11 @@
 // Starts off with the first integer in the array
 
 function findMaxNumber(arr) {
-  return arr.reduce((acc, num) => {
-    return num > acc ? num : acc;
+  if (arr.length === 0) {
+    return null;
+  }
+  return [...new Set(arr)].reduce((max, num) => {
+    return num > max ? num : max;
   }, arr[0]);
 }
 
